@@ -124,11 +124,25 @@ footer {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f0f0f0;
   cursor: pointer;
+  border-radius: 7%;
 }
 
 .button.primary {
   background-color: #ffc000;
+ 
 }
 .button:hover {
   border: 0.1rem #808080 solid;
+}
+/* Filter */
+.filter{
+  display:flex;
+  justify-content: space-around;
+  padding: 1rem;
+  margin:1rem;
+  border-bottom:0.1rem #c0c0c0 solid;
+}
+
+.filter div{
+  flex:1
 }
