@@ -1,41 +1,83 @@
- import React from "react";
+import React from "react";
 import Products from "./components/Products";
- import data from "./data.json";
+import Filter from "./components/Filter";
+import data from "./data.json";
 
- 
-
-class App extends React.Component{
-  constructor(){
+class App extends React.Component {
+  constructor() {
     super();
-    this.state={
+    this.state = {
       products: data.products,
       size: "",
       sort: "",
-    }
+    };
   }
-  render(){
+  sortProducts =(event) =>{
+    console.log(event.target.value);
+    const sort = event.target.value;
+    this.setState((state) => ({
+      sort: sort,
+      products: this.state.products
+        .slice()
+        .sort((a, b) =>
+          sort === "lowest"
+            ? a.price > b.price
+              ? 1
+              : -1
+            : sort === "highest"
+            ? a.price < b.price
+              ? 1
+              : -1
+            : a._id > b._id
+            ? 1
+            : -1
+        ),
+    }));
+  };
+
+  filterProducts = (event) => {
+    console.log(event.target.value);
+    if (event.target.value === "") {
+      this.setState({ size: event.target.value, product: data.products });
+    } else {
+      this.setState({
+        size: event.target.value,
+        products: data.products.filter(
+          (product) => product.availableSizes.indexOf(event.target.value) >= 0
+        ),
+      });
+    }
+  };
+
+  render() {
     return (
       <div className="grid-container">
         <header>
-          <a href="/"> 4 Her</a>
+          <div>
+            <a href="/"> 4 HER</a>
+          </div>
         </header>
         <main>
-         <div className="content">
-           <div className="main">
- <Products products={this.state.products}></Products>
-           </div>
-           <div className="sidebar">
-cart items
-           </div>
-         </div>
+          <div className="content">
+            <div className="main">
+              <div>
+                <Filter
+                  count={this.state.products.length}
+                  size={this.state.size}
+                  sort={this.state.sort}
+                  filterProducts={this.filterProducts}
+                  sortProducts={this.sortProducts}
+                ></Filter>
+              </div>
+              <Products products={this.state.products}></Products>
+            </div>
+            <div className="sidebar">cart items</div>
+          </div>
         </main>
-        <footer>
-          All right reserved for M.Aziz.
-        </footer>
+        <footer>All right reserved for M.Aziz.</footer>
       </div>
     );
   }
-  
 }
 
 export default App;
