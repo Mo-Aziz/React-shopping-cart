@@ -17,6 +17,7 @@ select,
 button,
 textarea {
   font-size: 1.6rem;
+  
   font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
 
@@ -27,7 +28,7 @@ textarea {
     "main"
     "footer";
   grid-template-rows: 5rem 1fr 5rem;
-  grid-template-columns: 1fr;
+  grid-template-columns: fr;
   height: 100%;
 }
 a {
@@ -42,7 +43,9 @@ header {
   color: azure;
   display: flex;
   align-items: center;
-  padding: 0.5rem;
+  padding: 2rem;
+  
+  height: 2rem;
 }
 header a {
   color: white;
@@ -124,11 +127,12 @@ footer {
   border: 0.1rem #c0c0c0 solid;
   background-color: #f0f0f0;
   cursor: pointer;
+  font-weight: bolder;
   border-radius: 7%;
 }
 
 .button.primary {
-  background-color: #ffc000;
+  background-color: #ffbf00;
  
 }
 .button:hover {
@@ -145,4 +149,58 @@ footer {
 
 .filter div{
   flex:1
+}
+
+/* Cart */
+.cart{
+padding:1rem;
+margin:1rem;
+display:flex;
+}
+
+.cart-header{
+  /* border-bottom: none .1rem #c0c0c0 solid; */
+  border: .2rem #c0c0c0 solid;
+  border-radius: 3%;
+}
+
+.cart-items{
+  padding:0;
+  width:100%;
+  list-style-type: none;
+  border: .5rem  #c0c0c0 solid;
+}
+.cart-items img{
+  width:7rem;
+}
+.cart-items li{
+  display: flex;
+}
+
+.cart-items li div{
+  padding:.5rem;
+}
+
+.cart-items li div:last-child{
+  flex:1 ;
+}
+
+.right{
+  text-align: right;
+  margin: 2rem;
+}
+
+.total{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  width:100%
+}
+
+.total > div{
+  font-size: 2rem;
+}
+.total >div,
+.total >button{
+  flex: 1;
 }
