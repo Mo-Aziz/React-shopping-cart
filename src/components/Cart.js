@@ -32,7 +32,7 @@ class Cart extends Component {
     };
     this.props.createOrder(order);
   };
-closeMOdal =()=>{
+closeModal =()=>{
   this.props.clearOrder();
 }
   render() {
@@ -49,9 +49,9 @@ closeMOdal =()=>{
           )}
 
           {order && (
-            <Modal isOpen={true} onRequestClose={this}>
+            <Modal isOpen={true} onRequestClose={this.closeModal}>
               <Zoom>
-                <button className="close-modal" onClick={this.closeMOdal}>
+                <button className="close-modal" onClick={this.closeModal}>
                   x
                 </button>
                 <div className="order-details">
