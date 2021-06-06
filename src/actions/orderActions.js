@@ -1,4 +1,9 @@
-import { CREATE_ORDER, CLEAR_CART, CLEAR_ORDER } from "../types";
+import {
+  CREATE_ORDER,
+  CLEAR_CART,
+  CLEAR_ORDER,
+  FETCH_ORDERS,
+} from "../types";
 
 export const createOrder = (order) => (dispatch) => {
   fetch("/api/orders", {
@@ -15,6 +20,16 @@ export const createOrder = (order) => (dispatch) => {
       dispatch({ type: CLEAR_CART });
     });
 };
+
 export const clearOrder = () => (dispatch) => {
   dispatch({ type: CLEAR_ORDER });
+};
+
+// fetch order action
+export const fetchOrders = () => (dispatch) => {
+  fetch("/api/orders")
+    .then((res) => res.json())
+    .then((data) => {
+      dispatch({ type: FETCH_ORDERS, payload: data });
+    });
 };

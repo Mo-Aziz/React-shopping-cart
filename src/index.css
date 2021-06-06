@@ -42,6 +42,7 @@ header {
   background-color: #203040;
   color: azure;
   display: flex;
+  justify-content: space-between;
   height: 200px;
   align-items: center;
   padding: 2rem;
@@ -269,10 +270,39 @@ input {
 .order-details li div{
   padding: 10px;
 }
-
- 
-
+.order-details .items{
+  text-align: right;
+  padding: 0;
+}
 .success-message{
   color:green;
+}
+/* styling orders page */
+
+.orders{
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 1400px;
+  text-align: center;
+  align-items: center;
+}
+
+.orders td,.orders th{
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.orders tr:nth-child(even){background-color: #f2f2f2;}
+
+.orders tr:hover {background-color: #ddd;}
+
+.orders th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
 }
 
