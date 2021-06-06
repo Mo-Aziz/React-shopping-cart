@@ -4,6 +4,7 @@ import store from "./store";
 import { Provider } from "react-redux";
 import HomeScreen from "./screens/HomeScreen";
 import AdminScreen from "./screens/AdminScreen";
+import Header from "./components/Navbar/Header.component";
 
 class App extends React.Component {
   // constructor() {
@@ -94,18 +95,20 @@ class App extends React.Component {
       <Provider store={store}>
         <BrowserRouter>
           <div className="grid-container">
-            <header>
+            {/* <header>
              
                   <Link to="/"> 4 HER</Link>
                   <Link to="/admin">Admins</Link>
             
-            </header>
+            </header> */}
+            <Header/>
             <main>
               <Route path="/admin" component={AdminScreen} />
               <Route path="/" component={HomeScreen} exact />
               
             </main>
             <footer>All right reserved for M.Aziz.</footer>
+      
           </div>
         </BrowserRouter>
       </Provider>
