@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React  from "react";
 import { Button } from "../../globalStyles";
 import {
   Nav,
@@ -33,7 +33,7 @@ const Header = () => {
             </NavItem>
             <NavItemBtn>
               <NavBtnLink to="/">
-                <Button primary> Subscribe for our new arrivals</Button>
+                <Button primary> Subscribe for our news</Button>
               </NavBtnLink>
             </NavItemBtn>
           </NavMenu>

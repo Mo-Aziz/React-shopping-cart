@@ -1,10 +1,11 @@
 import React from "react";
-import { BrowserRouter, Route, Link } from "react-router-dom";
+import { BrowserRouter, Route} from "react-router-dom";
 import store from "./store";
 import { Provider } from "react-redux";
 import HomeScreen from "./screens/HomeScreen";
 import AdminScreen from "./screens/AdminScreen";
-import Header from "./components/Navbar/Header.component";
+import Header from "./components/Header/Header.component";
+import Footer from "./components/Footer/Footer.component";
 
 class App extends React.Component {
   // constructor() {
@@ -105,11 +106,13 @@ class App extends React.Component {
             <main>
               <Route path="/admin" component={AdminScreen} />
               <Route path="/" component={HomeScreen} exact />
-              
+        
             </main>
-            <footer>All right reserved for M.Aziz.</footer>
+           
+            <Footer/>
       
           </div>
+         
         </BrowserRouter>
       </Provider>
     );
