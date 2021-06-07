@@ -96,16 +96,12 @@ class App extends React.Component {
       <Provider store={store}>
         <BrowserRouter>
           <div className="grid-container">
-            {/* <header>
-             
-                  <Link to="/"> 4 HER</Link>
-                  <Link to="/admin">Admins</Link>
             
-            </header> */}
             <Header/>
             <main>
               <Route path="/admin" component={AdminScreen} />
               <Route path="/" component={HomeScreen} exact />
+              <Route path="/footer" component={Footer}/>
         
             </main>
            

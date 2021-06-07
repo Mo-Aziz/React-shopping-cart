@@ -1,5 +1,4 @@
 import React from "react";
-import{Link} from "react-router-dom"
 import {
   FaFacebook,
   FaInstagram,
@@ -35,12 +34,10 @@ const Footer = () => {
     <FooterContainer>
       <FooterSubscription>
         <FooterSubHeading>
-          Subscribe to recieve the lastest updates and news about
-          our latest designs.
+          Subscribe to recieve the lastest updates and news about our latest
+          designs.
         </FooterSubHeading>
-        <FooterSubText>
-      
-        </FooterSubText>
+        <FooterSubText></FooterSubText>
         <Form>
           <FormInput name="email" type="email" placeholder="your email" />
           <Button fontbg>Subscribe</Button>
@@ -54,7 +51,6 @@ const Footer = () => {
             <FooterLink to="/"> Testimonials</FooterLink>
             <FooterLink to="/">Careers</FooterLink>
             <FooterLink to="/">Investors</FooterLink>
-            
           </FooterLinkItems>
           <FooterLinkItems>
             <FooterLinkTitle>Help</FooterLinkTitle>
@@ -62,7 +58,6 @@ const Footer = () => {
             <FooterLink to="/"> My Account</FooterLink>
             <FooterLink to="/">Find a Store </FooterLink>
             <FooterLink to="/">Gift Card</FooterLink>
-             
           </FooterLinkItems>
         </FooterLinksWrapper>
         <FooterLinksWrapper>
@@ -74,19 +69,16 @@ const Footer = () => {
             <FooterLink to="/admin">Admins</FooterLink>
             <FooterLink to="/">Term of service</FooterLink>
           </FooterLinkItems>
-         
         </FooterLinksWrapper>
       </FooterLinksContainer>
       <SocialMedia>
         <SocialMediaWrap>
           <SocialLogo to="/">
-            <SocialIcon />
-          
-          4 HER
+            <SocialIcon />4 HER
           </SocialLogo>
           <WebsiteRights>4 HER © 2021</WebsiteRights>
           <WebsiteRights> All right reserved for M.Aziz</WebsiteRights>
-         
+
           <SocialIcons>
             <SocialIconLink href="/" target="_blank" aria-label="Facebook">
               <FaFacebook />

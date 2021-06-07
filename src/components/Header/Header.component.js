@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import { Button } from "../../globalStyles";
 import {
   Nav,
@@ -26,7 +26,7 @@ const Header = () => {
               <NavLink to="/">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/">Services</NavLink>
+              <NavLink to="/footer">Services</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/">products</NavLink>
